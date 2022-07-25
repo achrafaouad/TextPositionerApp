@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/achrafaouad/TextPositionerApp/static/css/main.c9085c07.css",
+    "main.js": "/achrafaouad/TextPositionerApp/static/js/main.d221699d.js",
+    "static/js/787.4e7fa7a6.chunk.js": "/achrafaouad/TextPositionerApp/static/js/787.4e7fa7a6.chunk.js",
+    "static/media/logo.svg": "/achrafaouad/TextPositionerApp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/achrafaouad/TextPositionerApp/index.html",
+    "main.c9085c07.css.map": "/achrafaouad/TextPositionerApp/static/css/main.c9085c07.css.map",
+    "main.d221699d.js.map": "/achrafaouad/TextPositionerApp/static/js/main.d221699d.js.map",
+    "787.4e7fa7a6.chunk.js.map": "/achrafaouad/TextPositionerApp/static/js/787.4e7fa7a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9085c07.css",
+    "static/js/main.d221699d.js"
+  ]
+}
