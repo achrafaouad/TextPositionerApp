@@ -16,6 +16,8 @@ const App = ()=> {
   const [font, setFont] = useState('');
   const [fsize, setFsize] = useState('');
   const [color, setcolor] = useState('');
+  const [fsize2, setFsize2] = useState('');
+  const [color2, setcolor2] = useState('');
 
   useEffect(() => {
     // 👇️ get global mouse coordinates
@@ -100,8 +102,12 @@ const App = ()=> {
 
 
    setCss(
-    `.image { 
-      position: relative; 
+    `
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+    .image { position: relative; 
       width: 100%;
    }
    .image144{
@@ -125,9 +131,9 @@ const App = ()=> {
       top: ${coordsFinal2.y-20}px;
       left: ${coordsFinal2.x}px; 
       width: 100%;
-      color:${color};
+      color:${color2};
       font-family:${font};
-      font-size:${fsize}px;
+      font-size:${fsize2}px;
    }`)
 
    }
@@ -146,6 +152,14 @@ const App = ()=> {
   const onColorChange = (event) => {
     console.log(event.target.value)
     setcolor(event.target.value);
+  }
+  const onsizeChange2 = (event) => {
+    console.log(event.target.value)
+    setFsize2(event.target.value);
+  }
+  const onColorChange2 = (event) => {
+    console.log(event.target.value)
+    setcolor2(event.target.value);
   }
  
 
@@ -183,15 +197,35 @@ const App = ()=> {
 
 <div className="row">
 <div className="areaQuery" >
-  <div className="col-sm">
+  <div className='container'>
+  <div className="row">
+  <div className="col-6">
   <p>color</p>
 <input type="text"  style={{width:'100%',borderRadius:'10px'}}
       onChange={onColorChange} />
   </div>
-  <div className="col-sm">
+  <div className="col-6">
+  <p>color2</p>
+<input type="text"  style={{width:'100%',borderRadius:'10px'}}
+      onChange={onColorChange2} />
+  </div>
+  </div>
+  
+
+  </div>
+  <div className='container'>
+  <div className="row">
+  <div className="col-6">
   <p>size (px)</p>
 <input type="text"  style={{width:'100%',borderRadius:'10px'}}
       onChange={onsizeChange} />
+  </div>
+  <div className="col-6">
+  <p>size 2 (px)</p>
+<input type="text"  style={{width:'100%',borderRadius:'10px'}}
+      onChange={onsizeChange2} />
+  </div>
+  </div>
   </div>
   <div className="col-sm">
   <p>Font</p>
@@ -202,6 +236,9 @@ const App = ()=> {
   <option value='"Times New Roman", Times, serif'>"Times New Roman", Times, serif</option>
   <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
   <option value='"Lucida Console", "Courier New", monospace'>"Lucida Console", "Courier New", monospace</option>
+  <option value="'Edu VIC WA NT Beginner', cursive">'Edu VIC WA NT Beginner', cursive</option>
+  <option value= "'Rubik', sans-serif">'Rubik', sans-serif</option>
+  <option value= "'Roboto', sans-serif">'Roboto', sans-serif</option>
 </select>
 
   </div>
