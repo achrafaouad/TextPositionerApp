@@ -45,8 +45,43 @@
 }
 
 .areaQuery{
-  background-color: rgba(85,212,152,.5);
+  font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+  margin-top:2px;
+  background-color: rgba(0,0,0,0.5);
   width: 100%;
+  color:whitesmoke;
   border: 2px rgba(85,212,152,.8) solid;
-  border-radius: 4px;
+  border-radius: 10px;
+}
+
+
+body{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+
+
+.App-particles__container {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -5;
+}
+.App-particles__container canvas {
+  transition: 0.2s all ease-in-out;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.container{
+  margin: 10px
 }

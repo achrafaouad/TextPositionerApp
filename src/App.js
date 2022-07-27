@@ -1,6 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
+import Particle from "react-particles-js";
+import particlesConfig from "./assets/particlesConfig.json";
 const App = ()=> {
   // const [selectedFile, setSelectedFile] = useState('');
   const [coords, setCoords] = useState({x: 0, y: 0});
@@ -76,6 +77,8 @@ const App = ()=> {
 
    }
   const generate = (event) => {
+    setImageLink(null)
+
     console.log(size)
     sethtml(
       `<!DOCTYPE html>
@@ -103,10 +106,11 @@ const App = ()=> {
 
    setCss(
     `
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+Pro:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
     .image { position: relative; 
       width: 100%;
    }
@@ -164,7 +168,11 @@ const App = ()=> {
  
 
   return (
+    <>
+    <Particle  params={particlesConfig} className="App-particles__container" />
+
     <div className="App">
+
       <p className="title">get text coordinates</p>
      
      {(imageLink && size.width && size.height) && <img alt='fff' onClick={handleMouseMovechoice}
@@ -239,6 +247,7 @@ const App = ()=> {
   <option value="'Edu VIC WA NT Beginner', cursive">'Edu VIC WA NT Beginner', cursive</option>
   <option value= "'Rubik', sans-serif">'Rubik', sans-serif</option>
   <option value= "'Roboto', sans-serif">'Roboto', sans-serif</option>
+  <option value= "'Source Sans Pro', sans-serif">'Source Sans Pro', sans-serif</option>
 </select>
 
   </div>
@@ -267,22 +276,22 @@ const App = ()=> {
       
       <div
         
-        style={{padding: '3rem', backgroundColor: 'lightgray'}}
+        style={{padding: '1rem', backgroundColor: 'rgba(0,0,0,0.5)'}}
       >
-        <h2>
+        <h2 style={{color:'white'}}>
           Coords: {coords.x} {coords.y}
         </h2>
-        <h2>
+        <h2 style={{color:'white'}}>
           final Coords: {coordsFinal.x} {coordsFinal.y}
         </h2>
-        <h2>
+        <h2 style={{color:'white'}}>
           final Coords 2 : {coordsFinal2.x} {coordsFinal2.y}
         </h2>
       </div>
 
       <hr />
 
-      <h2>
+      <h2 style={{color:'red'}}> 
         Global coords: {globalCoords.x} {globalCoords.y}
       </h2>
     </div>
@@ -301,6 +310,7 @@ const App = ()=> {
       <br/>
       <br/>
     </div>
+    </>
   );
 }
 
